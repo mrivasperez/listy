@@ -15,13 +15,16 @@ function filterNames(){
     //get lis from ul and get them into an array
     let li = ul.querySelectorAll('li.collection-item');
 
-    //loop through collection-item li array
+    //loop through collection-item lis
     for(let i = 0; i < li.length; i++){
+        //set a to 
         let a = li[i].getElementsByTagName('a')[0];
-        //if matched
+        //if matched... do nothing
         if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
             li[i].style.display = '';
-        } else{
+        }
+        //if not matched make them disappear 
+        else{
             li[i].style.display = 'none';
         }
 
